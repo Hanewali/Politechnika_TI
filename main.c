@@ -20,29 +20,34 @@ void task_1(){
 }
 
 void task_2(){
-    int a, b, c, d;
+    signed int a, b, c, d;
     float x;
-    printf("Wpisz a:");
-    fflush(stdout);
-    scanf(" %i", &a);
-    printf("Wpisz b:");
-    fflush(stdout);
-    scanf(" %i", &b);
-    printf("Wpisz c:");
-    fflush(stdout);
-    scanf(" %i", &c);
-    printf("Wpisz d:");
-    fflush(stdout);
-    scanf(" %i", &d);
-    printf("Wpisz x:");
-    fflush(stdout);
-    scanf(" %f", &x);
+    a = 1;
+    b = 2;
+    c = 0;
+    d = -1;
+    x = -1;
+
+//    printf("Wpisz a:");
+//    fflush(stdout);
+//    scanf(" %i", &a);
+//    printf("Wpisz b:");
+//    fflush(stdout);
+//    scanf(" %i", &b);
+//    printf("Wpisz c:");
+//    fflush(stdout);
+//    scanf(" %i", &c);
+//    printf("Wpisz d:");
+//    fflush(stdout);
+//    scanf(" %i", &d);
+//    printf("Wpisz x:");
+//    fflush(stdout);
+//    scanf(" %f", &x);
     float value = (a*pow(x, 3) + (b * pow(x, 2)) + (c * pow(x, 1)) + d);
     printf("Wynik: %u \n", value);
     if(abs(value) < pow(10, -7))
     {
-//        printf("Liczba %i jest pierwiastkiem wielomianu %ix^3+%ix^2+%ix-%i", x, a, b, c, d);
-        printf("Liczba %i jest pierwiastkiem wielomianu %ix^3", x, a);
+        printf("Liczba %.0f jest pierwiastkiem wielomianu %ix^3", x, a);
         printf("x^2");
         if(b < 0){
             printf("%i", b);

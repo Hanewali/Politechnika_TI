@@ -6,8 +6,9 @@
 #include "03.c"
 
 int main() {
-//    task_1_02();
-//    task_2_02();
-    task_1_03();
+//    task_02_1();
+//    task_02_2();
+//    task_03_1();
+    task_03_2();
 }
 

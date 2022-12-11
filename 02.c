@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-void task_1_02(){
+void task_02_1(){
     int fourDigitNumber;
     printf("Wpisz liczbe czterocyfrowa: ");
     fflush(stdout);
@@ -11,14 +11,14 @@ void task_1_02(){
     printf("Cyfra tysiecy: %1d \n", thousands);
     int hundreds = (fourDigitNumber / 100) % 10;
     printf("Cyfra setek: %1d \n", hundreds);
-    int tens = ((fourDigitNumber / 10) % 100) % 10;
+    int tens = (fourDigitNumber / 10) % 10;
     printf("Cyfra dziesiatek: %1d \n", tens);
     int ones = fourDigitNumber - (thousands * 1000) - (hundreds * 100) - (tens * 10);
     printf("Cyfra jednosci: %1d \n", ones);
     printf("Suma cyfr: %u", thousands + hundreds + tens + ones);
 }
 
-void task_2_02(){
+void task_02_2(){
         signed int a, b, c, d;
         float x;
         printf("Wpisz a:");

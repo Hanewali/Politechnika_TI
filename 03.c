@@ -25,7 +25,7 @@ void task_03_1(){
         }
     }
     else if (isdigit(kodZnaku)){
-        printf("Kod znaku %i \n", kodZnaku);
+        printf("Kod znaku: %i \n", kodZnaku);
         int liczba = znak - '0';
         printf("Cyfra o jeden mniejsza: %i \n", liczba - 1);
         printf("Cyfra o jeden wieksza: %i \n", liczba + 1);

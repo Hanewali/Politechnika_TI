@@ -2,8 +2,8 @@
 // Created by jakub on 11.12.2022.
 //
 
-#include "02.c"
-#include "03.c"
+#include "homework/02.c"
+#include "homework/03.c"
 
 int main() {
 //    task_02_1();

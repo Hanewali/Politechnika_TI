@@ -3,6 +3,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int isPrime(int num){
     for (int i = 2; i < num; ++i) {
@@ -60,9 +61,8 @@ void task_04_1(){
             }
             temp--;
         } while(temp > 0);
-
-        printf("Koniec programu. \n");
     }
+    printf("Koniec programu. \n");
 }
 
 
@@ -73,7 +73,33 @@ void task_04_2(){
     scanf("%i", &zakres);
     printf("\n");
 
-    for (int i = 0; i < zakres; ++i) {
-
+    for (int i = 1; i < zakres; i++) {
+        if(!isPrime(i)){
+            int suma = 0;
+            for (int j = 1; j < i; j++) {
+                if(i % j == 0){
+                    suma = suma + j;
+                }
+            }
+            if(suma < i){
+                continue;
+            }
+            printf("%i (dzielniki: ", i);
+            int afterFirstDivider = 0;
+            for (int j = 1; j < i; ++j) {
+                int last = j == (i - 1) ? 1 : 0;
+                if(i % j == 0){
+                    if(!last && afterFirstDivider){
+                        printf(", ");
+                    }
+                    printf("%i", j);
+                    afterFirstDivider = 1;
+                }
+                if(last){
+                    printf("; ");
+                }
+            }
+            printf("nadmiar: %i), \n", suma - i);
+        }
     }
 }

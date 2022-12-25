@@ -32,7 +32,7 @@ void task_04_1(){
             continue;
         }
 
-        int temp = input;
+        int temp = input - 1;
 
         do{
             if(temp % 7 == 0){
@@ -42,7 +42,7 @@ void task_04_1(){
             temp--;
         } while(temp > 0);
 
-        temp = input;
+        temp = input - 1;
 
         do{
             if(temp % 9 == 0){
@@ -52,7 +52,7 @@ void task_04_1(){
             temp--;
         } while(temp > 0);
 
-        temp = input;
+        temp = input - 1;
 
         do{
             if(isPrime(temp)){

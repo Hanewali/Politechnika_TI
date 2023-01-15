@@ -19,6 +19,12 @@ void t_05_01(){
     }
 
     int last = ary[DLUGOSC-1];
+    printf("Ostatnia z wylosowanych: %u \n", last);
+
+    if(last == 0){
+        printf("Ostatnia liczba to 0 - pomijamy dzielenie!");
+    }
+
     int dividableCounter = 0;
 
     for(int i = 0; i < DLUGOSC - 1; i++){

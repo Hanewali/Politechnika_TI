@@ -15,7 +15,7 @@ void t_05_01(){
     int ary[DLUGOSC];
 
     for(int i = 0; i < DLUGOSC; i++){
-        ary[i] = rand() % 10;
+        ary[i] = rand() % 11;
     }
 
     int last = ary[DLUGOSC-1];
@@ -59,4 +59,21 @@ void t_05_02(){
     printf("Suma: %i \n", sum);
     printf("Najmniejsza liczba: %i \n", min);
     printf("Ilosc wiekszych niz ostatnia: %i \n", biggerThanLastCount);
+}
+
+void t_05_03() {
+    int ary[4][4] =
+            {
+            {1,2, 3, 4},
+            {5, 6, 7, 8},
+            {9,10,11,12},
+            {13,14,15,16}
+            };
+
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            printf("%i ", ary[i][j]);
+        }
+        printf("\n");
+    }
 }

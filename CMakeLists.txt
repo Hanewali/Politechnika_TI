@@ -4,3 +4,5 @@ project(wikamp C)
 set(CMAKE_C_STANDARD 17)
 
 add_executable(wikamp main.c)
+
+target_link_libraries(wikamp m)

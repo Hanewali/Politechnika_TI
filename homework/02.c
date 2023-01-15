@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 void task_02_1(){
     int fourDigitNumber;
@@ -37,7 +38,7 @@ void task_02_2(){
         fflush(stdout);
         scanf(" %f", &x);
         float value = (a*pow(x, 3) + (b * pow(x, 2)) + (c * pow(x, 1)) + d);
-        printf("Wynik: %u \n", value);
+        printf("Wynik: %f \n", value);
         if(abs(value) < pow(10, -7))
         {
             printf("Liczba %.0f jest pierwiastkiem wielomianu %ix^3", x, a);

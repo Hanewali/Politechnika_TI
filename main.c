@@ -5,6 +5,7 @@
 #include "homework/02.c"
 #include "homework/03.c"
 #include "homework/04.c"
+#include <math.h>
 
 int main() {
 //    task_02_1();

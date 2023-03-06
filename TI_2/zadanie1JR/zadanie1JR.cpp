@@ -3,6 +3,7 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#define SIZE 10
 
 void menu() 
 {
@@ -17,7 +18,7 @@ void menu()
 int main()
 {
     int option = 1;
-    int myArray[10] = { 1,2,3,4,5,6,7,8,9,10 };
+    int myArray[SIZE] = { 1,2,3,4,5,6,7,8,9,10 };
 
     int min = 0;
     int max = 0;
@@ -38,7 +39,7 @@ int main()
         {
         case 1:
             printf("wprowadzenie wartosci\n");
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < SIZE; i++)
             {
                 printf("myArray[%d] = ", i);
                 scanf("%d", &myArray[i]);
@@ -46,7 +47,7 @@ int main()
             break;
         case 2:
             printf("wyswietalnie tablicy\n");
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < SIZE; i++)
             {
                 printf("myArray[%d] = %d\n", i, myArray[i]);
             }
@@ -55,7 +56,7 @@ int main()
             printf("zamiana min max\n");
             min = myArray[0];
             max = myArray[0];
-            for (int i = 1; i < 10; i++)
+            for (int i = 1; i < SIZE; i++)
             {
                 if (myArray[i] > max) {
                     max = myArray[i];
@@ -64,7 +65,7 @@ int main()
                     min = myArray[i];
                 }
             }
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < SIZE; i++)
             {
                 if (myArray[i] == min) {
                     myArray[i] = max;
@@ -77,11 +78,11 @@ int main()
         case 4:
             printf("obliczanie sredniej\n");
             sum = 0;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < SIZE; i++)
             {
                 sum += myArray[i];
             }
-            average = (float) sum / 10;
+            average = (float) sum / SIZE;
             printf("Srednia: %f\n", average);
             break;
         default:

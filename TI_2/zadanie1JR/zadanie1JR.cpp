@@ -63,7 +63,7 @@ float calculateAverage(int* arr, int size) {
     {
         sum += *(arr + i);
     }
-    return (float)sum / SIZE;
+    return (float)sum / size;
 }
 
 int main()

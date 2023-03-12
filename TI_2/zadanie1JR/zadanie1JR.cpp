@@ -15,15 +15,62 @@ void menu()
     printf("\n");
 }
 
+void displayAverage(float average) {
+    printf("Srednia wynosi %f", average);
+}
+
+void insertNumbersIntoArray(int* arr, int size) {
+    for (int i = 0; i < size; i++)
+    {
+        printf("myArray[%d] = ", i);
+        scanf("%d", (arr + i));
+    }
+}
+
+void showArray(int *arr, int size) {
+    for (int i = 0; i < size; i++)
+    {
+        printf("myArray[%d] = %d\n", i, *(arr + i));
+    }
+}
+
+void swapMinMax(int *arr, int size) {
+    int min = *arr;
+    int max = *arr;
+    for (int i = 1; i < size; i++)
+    {
+        if (*(arr + i) > max) {
+            max = *(arr + i);
+        }
+        if (*(arr + i) < min) {
+            min = *(arr + i);
+        }
+    }
+    for (int i = 0; i < size; i++)
+    {
+        if (*(arr + i) == min) {
+            *(arr + i) = max;
+        }
+        else if (*(arr + i) == max) {
+            *(arr + i) = min;
+        }
+    }
+}
+
+float calculateAverage(int* arr, int size) {
+    int sum = 0;
+    for (int i = 0; i < size; i++)
+    {
+        sum += *(arr + i);
+    }
+    return (float)sum / SIZE;
+}
+
 int main()
 {
     int option = 1;
     int myArray[SIZE] = { 1,2,3,4,5,6,7,8,9,10 };
 
-    int min = 0;
-    int max = 0;
-
-    int sum = 0;
     float average = 0;
 
     printf("Jest to aplikacja operujaca na 10-elementowej tablicy!\n");
@@ -39,51 +86,20 @@ int main()
         {
         case 1:
             printf("wprowadzenie wartosci\n");
-            for (int i = 0; i < SIZE; i++)
-            {
-                printf("myArray[%d] = ", i);
-                scanf("%d", &myArray[i]);
-            }
+            insertNumbersIntoArray(myArray, SIZE);
             break;
         case 2:
             printf("wyswietalnie tablicy\n");
-            for (int i = 0; i < SIZE; i++)
-            {
-                printf("myArray[%d] = %d\n", i, myArray[i]);
-            }
+            showArray(myArray, SIZE);
             break;
         case 3:
             printf("zamiana min max\n");
-            min = myArray[0];
-            max = myArray[0];
-            for (int i = 1; i < SIZE; i++)
-            {
-                if (myArray[i] > max) {
-                    max = myArray[i];
-                }
-                if (myArray[i] < min) {
-                    min = myArray[i];
-                }
-            }
-            for (int i = 0; i < SIZE; i++)
-            {
-                if (myArray[i] == min) {
-                    myArray[i] = max;
-                }
-                else if (myArray[i] == max) {
-                    myArray[i] = min;
-                }
-            }
+            swapMinMax(myArray, SIZE);
             break;
         case 4:
             printf("obliczanie sredniej\n");
-            sum = 0;
-            for (int i = 0; i < SIZE; i++)
-            {
-                sum += myArray[i];
-            }
-            average = (float) sum / SIZE;
-            printf("Srednia: %f\n", average);
+            average = calculateAverage(myArray, SIZE);
+            displayAverage(average);
             break;
         default:
             printf("wybierz wlasciwa opcje\n");

@@ -43,7 +43,15 @@ void printTextSmallLetters(char* str) {
 }
 
 void printTextCapitalLetters(char* str) {
-
+    while (*str) {
+        str++;
+        if (65 <= *str <= 90) {
+            printf("%c", *str + 32);
+        }
+        else if (97 <= *str <= 122) {
+            printf("%c", *str);
+        }
+    }
 }
 
 void clear()

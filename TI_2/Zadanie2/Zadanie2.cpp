@@ -54,7 +54,7 @@ void clear()
 int main()
 {
     int option = 0;
-    char str[SIZE] = "start";
+    char str[SIZE] = "Start";
 
     do {
         menu();

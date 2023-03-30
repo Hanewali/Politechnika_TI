@@ -30,26 +30,36 @@ void calculateTextLength(char* str) {
     printf("Character count: %d\n", counter);
 }
 
-void printTextSmallLetters(char* str) {
-    while (*str) {
-        str++;
-        if (97 <= *str <= 122) {
-            printf("%c", *str);
+void printTextSmallLetters(char *str, int length) {
+    for (int i = 0; i < length; i++)
+    {
+        char currentCharacter = str[i];
+        if (65 <= currentCharacter && currentCharacter <= 90) {
+            printf("%c", currentCharacter + 32);
         }
-        else if (65 <= *str <= 90) {
-            printf("%c", *str - 32);
+        else if (97 <= currentCharacter && currentCharacter <= 122) {
+            printf("%c", currentCharacter);
+        }
+        else {
+            printf("\n");
+	        break;
         }
     }
 }
 
-void printTextCapitalLetters(char* str) {
-    while (*str) {
-        str++;
-        if (65 <= *str <= 90) {
-            printf("%c", *str + 32);
+void printTextCapitalLetters(char* str, int length) {
+    for (int i = 0; i < length; i++)
+    {
+        char currentCharacter = str[i];
+        if (65 <= currentCharacter && currentCharacter <= 90) {
+            printf("%c", currentCharacter);
         }
-        else if (97 <= *str <= 122) {
-            printf("%c", *str);
+        else if (97 <= currentCharacter && currentCharacter <= 122) {
+            printf("%c", currentCharacter - 32);
+        }
+        else {
+            printf("\n");
+            break;
         }
     }
 }
@@ -62,7 +72,7 @@ void clear()
 int main()
 {
     int option = 0;
-    char str[SIZE] = "Start";
+    char str[SIZE] = "Start\0";
 
     do {
         menu();
@@ -81,9 +91,10 @@ int main()
                 calculateTextLength(str);
                 break;
             case 4:
-                printTextSmallLetters(str);
+                printTextSmallLetters(str, SIZE);
                 break;
             case 5:
+                printTextCapitalLetters(str, SIZE);
                 break;
         }
     } while (option != 0);

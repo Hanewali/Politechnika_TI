@@ -45,7 +45,7 @@ int deleteFromQueue(void) {
 
 	while (secondElement->nextNode != NULL)
 	{
-		currentNode = currentNode->nextNode;
+		queue = secondElement;
 	}
 
 	return *firstElementValue;

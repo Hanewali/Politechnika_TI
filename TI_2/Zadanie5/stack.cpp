@@ -21,9 +21,9 @@ int initializeStack()
 
 int push(int newElement)
 {
-	if (numberOfElements < SIZE)
+	if (numberOfElements < SIZE - 1)
 	{
-		stack[numberOfElements - 1] = newElement;
+		stack[numberOfElements] = newElement;
 		numberOfElements++;
 		return 0;
 	}
@@ -38,12 +38,12 @@ int pop()
 		return stack[numberOfElements];
 	}
 
-	return 1;
+	return NULL;
 }
 
 int top()
 {
 	if (numberOfElements > 0)
 		return stack[numberOfElements - 1];
-	return 1;
+	return NULL;
 }

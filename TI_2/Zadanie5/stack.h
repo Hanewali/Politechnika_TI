@@ -1,8 +1,7 @@
 #ifndef STACK_H
 #define STACK_H
 
-#include <iostream>
-
+int initializeStack(void);
 int push(int element);
 int pop(void);
 int top(void);

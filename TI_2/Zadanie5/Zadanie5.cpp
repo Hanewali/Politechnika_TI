@@ -1,20 +1,55 @@
-// Zadanie5.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
+#include "stack.h"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+void clear(void) {
+    while (getchar() != '\n');
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+void menu(void) {
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+    printf("1. Push\n");
+    printf("2. Pop\n");
+    printf("3. Top\n");
+    printf("0. Exit\n");
+}
+
+int main() {
+
+    int option;
+    int temp = 0;
+
+    initializeStack();
+
+    do
+    {
+        menu();
+
+        scanf("%d", &option);
+
+        clear();
+
+        switch (option)
+        {
+            case 1:
+				printf("Push\n");
+            	printf("Podaj wartosc: ");  
+				scanf("%d", &temp);
+                printf("\n");
+                push(temp);
+                break;
+            case 2:
+                printf("Pop\n");
+				temp = pop();
+				temp != NULL ? printf("%d\n", temp) : printf("Stack is empty\n");
+                break;
+            case 3:
+				printf("Top\n");
+				temp = top();
+				temp != NULL ? printf("%d\n", temp) : printf("Stack is empty\n");
+				break;
+        }
+    } while (option != 0);
+    return 0;
+}

@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\OneDrive - Politechnika Łódzka\materialy_wikamp\2_semestr\ti\main.cpp">
+    <ClCompile Include="stack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stack.cpp">
+    <ClCompile Include="Zadanie5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

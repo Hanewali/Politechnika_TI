@@ -3,6 +3,6 @@ project(wikamp C)
 
 set(CMAKE_C_STANDARD 17)
 
-add_executable(wikamp main.c)
+add_executable(wikamp main.c examTrial/ExamTrial.c)
 
 target_link_libraries(wikamp m)

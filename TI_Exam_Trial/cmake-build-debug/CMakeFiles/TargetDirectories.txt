@@ -1,0 +1,3 @@
+C:/Users/jakub/code/c/Politechnika_TI/TI_Exam_Trial/cmake-build-debug/CMakeFiles/TI_Exam_Trial.dir
+C:/Users/jakub/code/c/Politechnika_TI/TI_Exam_Trial/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jakub/code/c/Politechnika_TI/TI_Exam_Trial/cmake-build-debug/CMakeFiles/rebuild_cache.dir
